@@ -1,30 +1,22 @@
-// scripts.js
-
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('JavaScript is loaded and ready to go!');
-
-  // Navigation buttons
-  document.querySelectorAll('nav ul li a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      if (this.getAttribute('href') !== '#') {
-        return;
-      }
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
+document.querySelectorAll('.contribute').forEach(button => {
+  button.addEventListener('click', () => {
+    window.location.href = 'fundraising.html';
   });
+});
 
-  // Placeholder for button functionalities
-  document.querySelectorAll('.join, .contribute, .join-create').forEach(button => {
-    button.addEventListener('click', function() {
-      alert('This functionality will be implemented soon!');
-    });
+document.querySelectorAll('.join').forEach(button => {
+  button.addEventListener('click', () => {
+    window.location.href = 'community.html';
   });
+});
 
-  // Connect Wallet functionality
-  document.getElementById('connect-wallet').addEventListener('click', () => {
-    alert('Connect Wallet functionality will be implemented soon!');
+document.querySelectorAll('.join-create').forEach(button => {
+  button.addEventListener('click', () => {
+    window.location.href = 'project.html';
+  });
+});
+document.querySelectorAll('.join-create').forEach(button => {
+  button.addEventListener('click', () => {
+    window.location.href = 'create.html'; // Link to create.html page
   });
 });

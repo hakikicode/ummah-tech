@@ -3,6 +3,9 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
+  background-image: url('../assets/islamic-charity-background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 header {
@@ -50,22 +53,61 @@ button:hover {
 
 main {
   padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 1rem auto;
+  max-width: 1200px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 section {
   margin-bottom: 40px;
 }
 
-.fundraising-cards, .community-section {
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-image: url('../assets/islamic-charity-background.jpg'); /* Adjust path if necessary */
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 300px; /* Adjust width for better display */
+  background-color: white;
+  text-align: left; /* Align text to the left */
+}
+
+.card img {
+  width: 100%; /* Ensure the image takes up the full width of the card */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space below the image */
+}
+
+.fundraising-cards, .community-section, .project-cards {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .card, .community {
   border: 1px solid #ccc;
   padding: 20px;
   width: 200px;
+  background-color: white;
+}
+
+.card img.card-image {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
 
 footer {
